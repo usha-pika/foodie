@@ -1,0 +1,5 @@
+E:\foodie system\InterfaceTest\obj\Debug\net6.0\InterfaceTest.csproj.AssemblyReference.cache
+E:\foodie system\InterfaceTest\obj\Debug\net6.0\InterfaceTest.GeneratedMSBuildEditorConfig.editorconfig
+E:\foodie system\InterfaceTest\obj\Debug\net6.0\InterfaceTest.AssemblyInfoInputs.cache
+E:\foodie system\InterfaceTest\obj\Debug\net6.0\InterfaceTest.AssemblyInfo.cs
+E:\foodie system\InterfaceTest\obj\Debug\net6.0\InterfaceTest.csproj.CoreCompileInputs.cache
