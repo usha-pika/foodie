@@ -1,0 +1,2 @@
+ALTER TABLE Customers
+ADD Password VARCHAR(100);

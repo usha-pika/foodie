@@ -19,16 +19,13 @@ namespace FoodieSystem
 
         private void home_Click(object sender, EventArgs e)
         {
-            home1.Visible = true;
-            ourMenu1.Visible = false;
+           
             
         }
 
         private void Mennu_Click(object sender, EventArgs e)
         {
 
-            home1.Visible = false;
-            ourMenu1.Visible = true;
         }
 
         private void home1_Load(object sender, EventArgs e)
@@ -39,7 +36,12 @@ namespace FoodieSystem
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
 
-            home1.Visible = false;
+           
+        }
+
+        private void order_Click(object sender, EventArgs e)
+        {
+            orderpage1.Visible = true;
             ourMenu1.Visible = false;
         }
     }

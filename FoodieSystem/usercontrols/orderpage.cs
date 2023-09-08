@@ -13,12 +13,9 @@ namespace FoodieSystem.usercontrols
     public partial class orderpage : UserControl
     {
         private payment pay;
-        private orderpage orderPage;
         public orderpage()
         {
             InitializeComponent();
-            orderPage = new orderpage();
-            addUserControl(orderPage);
         }
         private void addUserControl(UserControl userControl)
         {

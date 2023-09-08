@@ -1,8 +1,10 @@
 ﻿using FoodieSystem.usercontrols;
+using SAM.form;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
@@ -16,17 +18,18 @@ namespace FoodieSystem
     {
 
         private orderpage orderPage;
-        private Home home;
         private LoginPage login;
+        private AdminDash adminDash;
+        private dbConnect DBConnect;
         public Form1()
         {
             InitializeComponent();
-           
+
         }
 
         private void addUserControl(UserControl userControl)
         {
-            
+
             panel1.Controls.Clear();
             panel1.Controls.Add(userControl);
             userControl.BringToFront();
@@ -43,12 +46,12 @@ namespace FoodieSystem
 
         private void Homepage_Load(object sender, EventArgs e)
         {
-           
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+
             panel2.Controls.Clear();
             login = new LoginPage();
             addUserControl(login);
@@ -92,8 +95,7 @@ namespace FoodieSystem
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            home  = new Home();
-            addUserControl(home);
+
         }
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -140,5 +142,61 @@ namespace FoodieSystem
             order.Show();
             this.Hide();
         }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnLog_Click(object sender, EventArgs e)
+        {
+
+            string Username = UserNaam.Text;
+            string Password = password.Text;
+            if (Username == "" || Password == "")
+            {
+                MessageBox.Show("Empty input");
+            }
+            else
+            {
+
+                try
+                {
+
+                    using (SqlConnection connection = new SqlConnection(dbConnect.strConnString))
+                    {
+                        connection.Open();
+                        using (SqlCommand command = new SqlCommand("SELECT * FROM admins WHERE Username = @Username AND Password = @Password", connection))
+                        {
+                            command.Parameters.AddWithValue("@Username", Username);
+                            command.Parameters.AddWithValue("@Password", Password);
+                            int count = (int)command.ExecuteScalar();
+                            if (count > 0)
+                            {
+                                MessageBox.Show("Login successful!");
+                                adminDash = new AdminDash();
+                                addUserControl(adminDash);
+                                // Perform actions after successful login, such as opening the main application window.
+
+
+                            }
+                            else
+                            {
+                                MessageBox.Show("Login failed. Please check your credentials.");
+                            }
+                        }
+                    }
+                }
+                catch
+                {
+                    MessageBox.Show("Inavlid Credentials");
+                }
+            } 
+
+        }
     }
 }
+ 
+    
+
+            

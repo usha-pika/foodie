@@ -5,8 +5,6 @@
     <EntitySet Name="Admins" EntityType="foodie.Admin" />
     <EntitySet Name="Menus" EntityType="foodie.Menu" />
     <EntitySet Name="Orders" EntityType="foodie.Order" />
-    <EntitySet Name="AddItems" EntityType="foodie.AddItem" />
-    <EntitySet Name="Addcustomers" EntityType="foodie.Addcustomer" />
   </EntityContainer>
   <EntityType Name="Customer">
     <Key>
@@ -43,22 +41,5 @@
     <Property Name="Quantity" Type="String" Nullable="false" />
     <Property Name="Price" Type="String" Nullable="false" />
     <Property Name="Total" Type="String" Nullable="false" />
-  </EntityType>
-  <EntityType Name="AddItem">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Itemname" Type="String" Nullable="false" />
-    <Property Name="Price" Type="String" Nullable="false" />
-    <Property Name="Category" Type="String" Nullable="false" />
-    <Property Name="Itemimage" Type="String" Nullable="false" />
-  </EntityType>
-  <EntityType Name="Addcustomer">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Property1" Type="String" Nullable="false" />
   </EntityType>
 </Schema>

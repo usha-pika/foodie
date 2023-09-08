@@ -36,6 +36,12 @@
     <Reference Include="BouncyCastle.Crypto, Version=1.9.0.0, Culture=neutral, PublicKeyToken=0e99375e54769942, processorArchitecture=MSIL">
       <HintPath>packages\Portable.BouncyCastle.1.9.0\lib\net40\BouncyCastle.Crypto.dll</HintPath>
     </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Google.Protobuf, Version=3.21.9.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
       <HintPath>packages\Google.Protobuf.3.21.9\lib\net45\Google.Protobuf.dll</HintPath>
     </Reference>
@@ -61,6 +67,7 @@
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
     </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Configuration.ConfigurationManager, Version=4.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\System.Configuration.ConfigurationManager.4.4.1\lib\net461\System.Configuration.ConfigurationManager.dll</HintPath>
@@ -111,6 +118,7 @@
     <Compile Include="Admin.Designer.cs">
       <DependentUpon>Admin.cs</DependentUpon>
     </Compile>
+    <Compile Include="dbConnect.cs" />
     <Compile Include="foodie.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -122,10 +130,32 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="models\Admin.cs">
+      <DependentUpon>foodie.tt</DependentUpon>
+    </Compile>
+    <Compile Include="models\Customer.cs">
+      <DependentUpon>foodie.tt</DependentUpon>
+    </Compile>
+    <Compile Include="models\foodie.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>foodie.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="models\foodie.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>foodie.tt</DependentUpon>
+    </Compile>
     <Compile Include="models\foodie.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>foodie.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="models\Menu.cs">
+      <DependentUpon>foodie.tt</DependentUpon>
+    </Compile>
+    <Compile Include="models\Order.cs">
+      <DependentUpon>foodie.tt</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -134,6 +164,18 @@
     </Compile>
     <Compile Include="User.Designer.cs">
       <DependentUpon>User.cs</DependentUpon>
+    </Compile>
+    <Compile Include="usercontrols\addCustomer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="usercontrols\addCustomer.Designer.cs">
+      <DependentUpon>addCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="usercontrols\AddOrder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="usercontrols\AddOrder.Designer.cs">
+      <DependentUpon>AddOrder.cs</DependentUpon>
     </Compile>
     <Compile Include="usercontrols\AdminDash.cs">
       <SubType>UserControl</SubType>
@@ -146,6 +188,36 @@
     </Compile>
     <Compile Include="usercontrols\Customer.Designer.cs">
       <DependentUpon>Customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="usercontrols\customerDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="usercontrols\customerDetails.Designer.cs">
+      <DependentUpon>customerDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="usercontrols\EditItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="usercontrols\EditItem.Designer.cs">
+      <DependentUpon>EditItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="usercontrols\EditOrder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="usercontrols\EditOrder.Designer.cs">
+      <DependentUpon>EditOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="usercontrols\itemDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="usercontrols\itemDetails.Designer.cs">
+      <DependentUpon>itemDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="usercontrols\orderDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="usercontrols\orderDetails.Designer.cs">
+      <DependentUpon>orderDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="usercontrols\Removeitem.cs">
       <SubType>UserControl</SubType>
@@ -165,23 +237,11 @@
     <Compile Include="usercontrols\Additem.Designer.cs">
       <DependentUpon>Additem.cs</DependentUpon>
     </Compile>
-    <Compile Include="usercontrols\Home.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="usercontrols\Home.Designer.cs">
-      <DependentUpon>Home.cs</DependentUpon>
-    </Compile>
     <Compile Include="usercontrols\LoginPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="usercontrols\LoginPage.Designer.cs">
       <DependentUpon>LoginPage.cs</DependentUpon>
-    </Compile>
-    <Compile Include="usercontrols\Nav.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="usercontrols\Nav.Designer.cs">
-      <DependentUpon>Nav.cs</DependentUpon>
     </Compile>
     <Compile Include="usercontrols\orderpage.cs">
       <SubType>UserControl</SubType>
@@ -226,11 +286,32 @@
     <EmbeddedResource Include="User.resx">
       <DependentUpon>User.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="usercontrols\addCustomer.resx">
+      <DependentUpon>addCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usercontrols\AddOrder.resx">
+      <DependentUpon>AddOrder.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="usercontrols\AdminDash.resx">
       <DependentUpon>AdminDash.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="usercontrols\Customer.resx">
       <DependentUpon>Customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usercontrols\customerDetails.resx">
+      <DependentUpon>customerDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usercontrols\EditItem.resx">
+      <DependentUpon>EditItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usercontrols\EditOrder.resx">
+      <DependentUpon>EditOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usercontrols\itemDetails.resx">
+      <DependentUpon>itemDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usercontrols\orderDetails.resx">
+      <DependentUpon>orderDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="usercontrols\Removeitem.resx">
       <DependentUpon>Removeitem.cs</DependentUpon>
@@ -241,14 +322,8 @@
     <EmbeddedResource Include="usercontrols\Additem.resx">
       <DependentUpon>Additem.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="usercontrols\Home.resx">
-      <DependentUpon>Home.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="usercontrols\LoginPage.resx">
       <DependentUpon>LoginPage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="usercontrols\Nav.resx">
-      <DependentUpon>Nav.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="usercontrols\orderpage.resx">
       <DependentUpon>orderpage.cs</DependentUpon>
@@ -298,6 +373,22 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\7_151222081350._le-trio-web.listing.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="models\foodie.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>foodie.Context.cs</LastGenOutput>
+      <DependentUpon>foodie.edmx</DependentUpon>
+    </Content>
+    <Content Include="models\foodie.edmx.sql" />
+    <Content Include="models\foodie.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>foodie.cs</LastGenOutput>
+      <DependentUpon>foodie.edmx</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

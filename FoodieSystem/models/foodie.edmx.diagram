@@ -9,8 +9,6 @@
         <EntityTypeShape EntityType="foodie.Admin" Width="1.5" PointX="7.375" PointY="0.625" />
         <EntityTypeShape EntityType="foodie.Menu" Width="1.5" PointX="2.875" PointY="0.5" />
         <EntityTypeShape EntityType="foodie.Order" Width="1.5" PointX="0.75" PointY="0.5" />
-        <EntityTypeShape EntityType="foodie.AddItem" Width="1.5" PointX="2.875" PointY="2.75" />
-        <EntityTypeShape EntityType="foodie.Addcustomer" Width="1.5" PointX="5.5" PointY="2.875" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
