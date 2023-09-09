@@ -19,5 +19,7 @@ namespace FoodieSystem.models
         public string Quantity { get; set; }
         public string Price { get; set; }
         public string Total { get; set; }
+        public string CustomerName { get; set; }
+        public string Date { get; set; }
     }
 }

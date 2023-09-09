@@ -4,8 +4,8 @@
     <EntitySetMapping Name="Customers">
       <EntityTypeMapping TypeName="IsTypeOf(foodie.Customer)">
         <MappingFragment StoreEntitySet="Customers">
+          <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
           <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="Username" ColumnName="Username" />
           <ScalarProperty Name="Address" ColumnName="Address" />
           <ScalarProperty Name="Contact" ColumnName="Contact" />
         </MappingFragment>
@@ -33,10 +33,11 @@
     <EntitySetMapping Name="Orders">
       <EntityTypeMapping TypeName="IsTypeOf(foodie.Order)">
         <MappingFragment StoreEntitySet="Orders">
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Itemname" ColumnName="Itemname" />
           <ScalarProperty Name="Quantity" ColumnName="Quantity" />
-          <ScalarProperty Name="Price" ColumnName="Price" />
           <ScalarProperty Name="Total" ColumnName="Total" />
         </MappingFragment>
       </EntityTypeMapping>

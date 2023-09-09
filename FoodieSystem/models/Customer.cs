@@ -15,8 +15,8 @@ namespace FoodieSystem.models
     public partial class Customer
     {
         public int Id { get; set; }
-        public string Username { get; set; }
         public string Address { get; set; }
         public string Contact { get; set; }
+        public string CustomerName { get; set; }
     }
 }
