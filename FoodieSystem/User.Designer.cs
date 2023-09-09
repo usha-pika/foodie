@@ -37,8 +37,6 @@
             this.Mennu = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.ourMenu1 = new FoodieSystem.usercontrols.OurMenu();
-            this.orderpage1 = new FoodieSystem.usercontrols.orderpage();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -144,10 +142,6 @@
             this.panel1.Size = new System.Drawing.Size(1108, 698);
             this.panel1.TabIndex = 41;
             // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.orderpage1);
-            this.panel3.Controls.Add(this.ourMenu1);
             //this.panel3.Controls.Add(this.home1);
             this.panel3.Location = new System.Drawing.Point(9, 161);
             this.panel3.Margin = new System.Windows.Forms.Padding(4);
@@ -155,23 +149,7 @@
             this.panel3.Size = new System.Drawing.Size(1087, 537);
             this.panel3.TabIndex = 41;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
-            // 
-            // ourMenu1
-            // 
-            this.ourMenu1.Location = new System.Drawing.Point(0, 0);
-            this.ourMenu1.Margin = new System.Windows.Forms.Padding(5);
-            this.ourMenu1.Name = "ourMenu1";
-            this.ourMenu1.Size = new System.Drawing.Size(1087, 533);
-            this.ourMenu1.TabIndex = 40;
            
-            // 
-            // orderpage1
-            // 
-            this.orderpage1.Location = new System.Drawing.Point(0, -1);
-            this.orderpage1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.orderpage1.Name = "orderpage1";
-            this.orderpage1.Size = new System.Drawing.Size(1092, 508);
-            this.orderpage1.TabIndex = 41;
             // 
             // User
             // 
@@ -201,9 +179,7 @@
         private System.Windows.Forms.Label home;
         private System.Windows.Forms.Label order;
         private System.Windows.Forms.Label Mennu;
-        private usercontrols.OurMenu ourMenu1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;
-        private usercontrols.orderpage orderpage1;
     }
 }

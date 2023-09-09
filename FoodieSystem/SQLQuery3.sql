@@ -1,2 +1,2 @@
-ALTER TABLE Customers
-ADD CustomerName VARCHAR(100);
+alter table orders
+add Date VARCHAR(100);

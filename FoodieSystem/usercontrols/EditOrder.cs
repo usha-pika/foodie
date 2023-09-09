@@ -16,6 +16,7 @@ namespace FoodieSystem.usercontrols
     public partial class EditOrder : UserControl
     {
         private SqlConnection connection;
+        private orderDetails OrderDetails;
         public EditOrder()
         {
             InitializeComponent();
@@ -129,8 +130,6 @@ namespace FoodieSystem.usercontrols
                     updateCommand.ExecuteNonQuery();
             
                         MessageBox.Show("Data updated successfully!");
-
-
                 }
                 catch (Exception ex)
                 {
@@ -139,7 +138,7 @@ namespace FoodieSystem.usercontrols
                 finally
                 {
                     connection.Close();
-                }
+            }
             }
            
     }

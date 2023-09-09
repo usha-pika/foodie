@@ -24,7 +24,7 @@ namespace FoodieSystem.usercontrols
             InitializeComponent();
             Load_Data();    
         }
-        private void Load_Data()
+        public void Load_Data()
         {
             connection = new SqlConnection(dbConnect.strConnString);
 

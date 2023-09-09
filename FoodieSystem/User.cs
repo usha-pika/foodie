@@ -41,8 +41,7 @@ namespace FoodieSystem
 
         private void order_Click(object sender, EventArgs e)
         {
-            orderpage1.Visible = true;
-            ourMenu1.Visible = false;
+            
         }
     }
 }

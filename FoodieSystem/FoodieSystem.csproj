@@ -195,6 +195,12 @@
     <Compile Include="usercontrols\customerDetails.Designer.cs">
       <DependentUpon>customerDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="usercontrols\editCustomer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="usercontrols\editCustomer.Designer.cs">
+      <DependentUpon>editCustomer.cs</DependentUpon>
+    </Compile>
     <Compile Include="usercontrols\EditItem.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -219,53 +225,11 @@
     <Compile Include="usercontrols\orderDetails.Designer.cs">
       <DependentUpon>orderDetails.cs</DependentUpon>
     </Compile>
-    <Compile Include="usercontrols\Removeitem.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="usercontrols\Removeitem.Designer.cs">
-      <DependentUpon>Removeitem.cs</DependentUpon>
-    </Compile>
-    <Compile Include="usercontrols\Updateitem.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="usercontrols\Updateitem.Designer.cs">
-      <DependentUpon>Updateitem.cs</DependentUpon>
-    </Compile>
     <Compile Include="usercontrols\Additem.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="usercontrols\Additem.Designer.cs">
       <DependentUpon>Additem.cs</DependentUpon>
-    </Compile>
-    <Compile Include="usercontrols\LoginPage.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="usercontrols\LoginPage.Designer.cs">
-      <DependentUpon>LoginPage.cs</DependentUpon>
-    </Compile>
-    <Compile Include="usercontrols\orderpage.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="usercontrols\orderpage.Designer.cs">
-      <DependentUpon>orderpage.cs</DependentUpon>
-    </Compile>
-    <Compile Include="usercontrols\OurMenu.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="usercontrols\OurMenu.Designer.cs">
-      <DependentUpon>OurMenu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="usercontrols\payment.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="usercontrols\payment.Designer.cs">
-      <DependentUpon>payment.cs</DependentUpon>
-    </Compile>
-    <Compile Include="usercontrols\SignupPage.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="usercontrols\SignupPage.Designer.cs">
-      <DependentUpon>SignupPage.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Admin.resx">
       <DependentUpon>Admin.cs</DependentUpon>
@@ -301,6 +265,9 @@
     <EmbeddedResource Include="usercontrols\customerDetails.resx">
       <DependentUpon>customerDetails.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="usercontrols\editCustomer.resx">
+      <DependentUpon>editCustomer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="usercontrols\EditItem.resx">
       <DependentUpon>EditItem.cs</DependentUpon>
     </EmbeddedResource>
@@ -313,29 +280,8 @@
     <EmbeddedResource Include="usercontrols\orderDetails.resx">
       <DependentUpon>orderDetails.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="usercontrols\Removeitem.resx">
-      <DependentUpon>Removeitem.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="usercontrols\Updateitem.resx">
-      <DependentUpon>Updateitem.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="usercontrols\Additem.resx">
       <DependentUpon>Additem.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="usercontrols\LoginPage.resx">
-      <DependentUpon>LoginPage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="usercontrols\orderpage.resx">
-      <DependentUpon>orderpage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="usercontrols\OurMenu.resx">
-      <DependentUpon>OurMenu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="usercontrols\payment.resx">
-      <DependentUpon>payment.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="usercontrols\SignupPage.resx">
-      <DependentUpon>SignupPage.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="foodie.edmx">
       <Generator>EntityModelCodeGenerator</Generator>

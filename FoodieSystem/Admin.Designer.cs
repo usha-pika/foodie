@@ -38,8 +38,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.updateitem1 = new FoodieSystem.usercontrols.Updateitem();
-            this.removeitem1 = new FoodieSystem.usercontrols.Removeitem();
             this.additem1 = new FoodieSystem.usercontrols.Additem();
             this.customer1 = new FoodieSystem.usercontrols.Customer();
             this.panel3.SuspendLayout();
@@ -125,8 +123,6 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.updateitem1);
-            this.panel1.Controls.Add(this.removeitem1);
             this.panel1.Controls.Add(this.additem1);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.customer1);
@@ -163,21 +159,8 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // updateitem1
-            // 
-            this.updateitem1.Location = new System.Drawing.Point(160, 126);
-            this.updateitem1.Name = "updateitem1";
-            this.updateitem1.Size = new System.Drawing.Size(667, 400);
-            this.updateitem1.TabIndex = 6;
-            this.updateitem1.Load += new System.EventHandler(this.updateitem1_Load);
-            // 
-            // removeitem1
-            // 
-            this.removeitem1.Location = new System.Drawing.Point(164, 126);
-            this.removeitem1.Name = "removeitem1";
-            this.removeitem1.Size = new System.Drawing.Size(640, 421);
-            this.removeitem1.TabIndex = 5;
+         
+           
             // 
             // additem1
             // 
@@ -217,10 +200,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private usercontrols.Updateitem updateitem1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel1;
-        private usercontrols.Removeitem removeitem1;
         private usercontrols.Additem additem1;
         private usercontrols.Customer customer1;
         private System.Windows.Forms.Panel panel2;

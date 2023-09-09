@@ -16,9 +16,6 @@ namespace FoodieSystem
 {
     public partial class Form1 : Form
     {
-
-        private orderpage orderPage;
-        private LoginPage login;
         private AdminDash adminDash;
         private dbConnect DBConnect;
         public Form1()
@@ -52,15 +49,11 @@ namespace FoodieSystem
         private void button1_Click(object sender, EventArgs e)
         {
 
-            panel2.Controls.Clear();
-            login = new LoginPage();
-            addUserControl(login);
+           
         }
 
         private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            orderPage = new orderpage();
-            addUserControl(orderPage);
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -115,8 +108,7 @@ namespace FoodieSystem
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            login = new LoginPage();
-            addUserControl(login);
+           
         }
 
         private void linkLabel7_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -126,9 +118,7 @@ namespace FoodieSystem
 
         private void loginbtn_Click(object sender, EventArgs e)
         {
-            LoginPage log = new LoginPage();
-            log.Show();
-            this.Hide();
+            
         }
 
         private void Mennu_Click(object sender, EventArgs e)
@@ -138,9 +128,7 @@ namespace FoodieSystem
 
         private void order_Click(object sender, EventArgs e)
         {
-            orderpage order = new orderpage();
-            order.Show();
-            this.Hide();
+         
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
@@ -189,7 +177,7 @@ namespace FoodieSystem
                 }
                 catch
                 {
-                    MessageBox.Show("Inavlid Credentials");
+                    MessageBox.Show("Invalid Credentials");
                 }
             } 
 

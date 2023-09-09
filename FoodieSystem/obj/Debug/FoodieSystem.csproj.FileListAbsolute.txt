@@ -120,14 +120,7 @@ D:\projects\foodie\FoodieSystem\obj\Debug\FoodieSystem.Properties.Resources.reso
 D:\projects\foodie\FoodieSystem\obj\Debug\FoodieSystem.User.resources
 D:\projects\foodie\FoodieSystem\obj\Debug\FoodieSystem.usercontrols.AdminDash.resources
 D:\projects\foodie\FoodieSystem\obj\Debug\FoodieSystem.usercontrols.Customer.resources
-D:\projects\foodie\FoodieSystem\obj\Debug\FoodieSystem.usercontrols.Removeitem.resources
-D:\projects\foodie\FoodieSystem\obj\Debug\FoodieSystem.usercontrols.Updateitem.resources
 D:\projects\foodie\FoodieSystem\obj\Debug\FoodieSystem.usercontrols.Additem.resources
-D:\projects\foodie\FoodieSystem\obj\Debug\FoodieSystem.usercontrols.LoginPage.resources
-D:\projects\foodie\FoodieSystem\obj\Debug\FoodieSystem.usercontrols.orderpage.resources
-D:\projects\foodie\FoodieSystem\obj\Debug\FoodieSystem.usercontrols.OurMenu.resources
-D:\projects\foodie\FoodieSystem\obj\Debug\FoodieSystem.usercontrols.payment.resources
-D:\projects\foodie\FoodieSystem\obj\Debug\FoodieSystem.usercontrols.SignupPage.resources
 D:\projects\foodie\FoodieSystem\obj\Debug\FoodieSystem.csproj.GenerateResource.cache
 D:\projects\foodie\FoodieSystem\obj\Debug\FoodieSystem.csproj.CoreCompileInputs.cache
 D:\projects\foodie\FoodieSystem\obj\Debug\FoodieSystem.csproj.CopyComplete
@@ -144,3 +137,4 @@ D:\projects\foodie\FoodieSystem\obj\Debug\FoodieSystem.usercontrols.EditItem.res
 D:\projects\foodie\FoodieSystem\obj\Debug\FoodieSystem.usercontrols.orderDetails.resources
 D:\projects\foodie\FoodieSystem\obj\Debug\FoodieSystem.usercontrols.AddOrder.resources
 D:\projects\foodie\FoodieSystem\obj\Debug\FoodieSystem.usercontrols.EditOrder.resources
+D:\projects\foodie\FoodieSystem\obj\Debug\FoodieSystem.usercontrols.editCustomer.resources

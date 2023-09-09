@@ -82,9 +82,9 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(32, 143);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(58, 16);
+            this.label4.Size = new System.Drawing.Size(52, 16);
             this.label4.TabIndex = 5;
-            this.label4.Text = "Address";
+            this.label4.Text = "Contact";
             // 
             // textBox3
             // 
@@ -134,6 +134,7 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(98, 22);
             this.textBox4.TabIndex = 10;
+            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // label7
             // 
@@ -170,6 +171,7 @@
             this.button1.TabIndex = 14;
             this.button1.Text = "Add";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // addCustomer
             // 

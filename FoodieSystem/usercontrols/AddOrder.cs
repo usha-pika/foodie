@@ -17,6 +17,7 @@ namespace FoodieSystem.usercontrols
     public partial class AddOrder : UserControl
     {
         private SqlConnection connection;
+        private orderDetails OrderDetails;
         public AddOrder()
         {
             InitializeComponent();
@@ -79,7 +80,7 @@ namespace FoodieSystem.usercontrols
 
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
-            string query = "SELECT Price FROM Menus";// Replace YourColumnName and YourTableName with actual column and table names.
+            string query = "SELECT Price,Itemname FROM Menus";// Replace YourColumnName and YourTableName with actual column and table names.
 
             try
             {
@@ -89,9 +90,14 @@ namespace FoodieSystem.usercontrols
 
                 while (reader.Read())
                 {
-                   int columnNameValue = Int32.Parse(reader["Price"].ToString());
-                    int pieces = Int32.Parse(textBox3.Text);
-                    label9.Text = (columnNameValue * pieces).ToString(); 
+                    if (comboBox1.Text == reader["Itemname"].ToString())
+                    {
+                        int columnNameValue = Int32.Parse(reader["Price"].ToString());
+                        int pieces = Int32.Parse(textBox3.Text);
+                        label9.Text = (columnNameValue * pieces).ToString();
+                        break;
+                    }
+                    label9.Text = "";
                 }
 
                 reader.Close();
@@ -133,7 +139,7 @@ namespace FoodieSystem.usercontrols
                 connection.Open();
 
                 // Prepare your SQL INSERT statement with placeholders for parameters
-                string insertQuery = "INSERT INTO Orders (CustomerName,ItemName, Quantity, Total) VALUES (@Value1, @Value2,@Value3,@Value4)";
+                string insertQuery = "INSERT INTO Orders (CustomerName,ItemName, Quantity, Total,Date) VALUES (@Value1, @Value2,@Value3,@Value4,@Value5)";
                 SqlCommand cmd = new SqlCommand(insertQuery, connection);
 
                 // Set parameter values from your input controls (e.g., textboxes)
@@ -141,6 +147,7 @@ namespace FoodieSystem.usercontrols
                 cmd.Parameters.AddWithValue("@Value2", comboBox1.Text);
                 cmd.Parameters.AddWithValue("@Value3", textBox3.Text);
                 cmd.Parameters.AddWithValue("@Value4", label9.Text);
+                cmd.Parameters.AddWithValue("Value5", DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
 
                 // Execute the INSERT statement
                 cmd.ExecuteNonQuery();
@@ -160,6 +167,7 @@ namespace FoodieSystem.usercontrols
             finally
             {
                 connection.Close();
+                OrderDetails = new orderDetails();
             }
         }
     }
